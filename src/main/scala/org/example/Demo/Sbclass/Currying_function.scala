@@ -1,3 +1,6 @@
+/*
+/*
+
 package org.example.Demo.Sbclass
 
 object Currying_function {
@@ -13,3 +16,32 @@ object Currying_function {
   }
 
 }
+
+*/
+
+object PrimeNumberFinder {
+  def isPrime(n: Int): Boolean = {
+    if (n <= 1) return false
+    if (n == 2) return true
+    if (n % 2 == 0) return false
+
+    var i = 3
+    while (i * i <= n) {
+      if (n % i == 0) return false
+      i += 2
+    }
+    return true
+  }
+
+  def findPrimes(numbers: List[Int]): List[Int] = {
+    numbers.filter(isPrime)
+  }
+
+  def main(args: Array[String]): Unit = {
+    val l = List(29, 7, 23, 15, 10)
+    val primes = findPrimes(l)
+    println("Prime numbers in the list: " + primes.mkString(", "))
+  }
+}
+
+*/

@@ -1,0 +1,35 @@
+import org.apache.spark.sql.SparkSession
+
+object LifeIsAllAboutTrying {
+  def main(args: Array[String]): Unit = {
+    val spark = SparkSession.builder()
+      .appName("LifeIsAllAboutTrying")
+      .master("local[*]") // Using local mode for illustration
+      .getOrCreate()
+
+    var success = false
+    var dead = false
+
+    while (!success) {
+      try {
+        tryAgain()
+        success = true // Simulating successful attempt
+        if (dead) {
+          println("Reached a dead state, breaking the loop.")
+          break // Exiting the loop in case of dead state (this is not real Scala syntax)
+        }
+      } catch {
+        case e: Exception =>
+          println("Attempt failed, trying again...")
+          // You could also add a condition to check if you've tried too many times and set dead to true
+      }
+    }
+
+    spark.stop()
+  }
+
+  def tryAgain(): Unit = {
+    // Simulating the action you're attempting
+    println("Trying...")
+  }
+}
