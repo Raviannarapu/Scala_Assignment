@@ -339,7 +339,7 @@ println(s"5*$num")
   //28. Write programs to print the following series. 1,3, divisible by five, 7,9,
   //11,13, divisible by five,.....21,23, divisible by five.
 
- /* for (num <- 1 to 23) {
+  /* for (num <- 1 to 23) {
     if (num % 3 == 0) {
       println("factor of three")
     } else {
@@ -348,23 +348,23 @@ println(s"5*$num")
   }
 }*/
 
-//29.Write programs to print the following series. 0.5^2, 0.7^2,0.9^2....5.1^2.
+  //29.Write programs to print the following series. 0.5^2, 0.7^2,0.9^2....5.1^2.
 
-/*  for (num <- 0.5 to 5.1 by 0.2) {
+  /*  for (num <- 0.5 to 5.1 by 0.2) {
     val square = num * num
     println(s"$num^2 = $square")
   }
 }*/
 
-//30. Write a for loop that never ends?
+  //30. Write a for loop that never ends?
 
-/*  while (true) {
+  /*  while (true) {
     println("This loop will run indefinitely")
   }
 }*/
 
-//31. Write a Loop inside other loop and observe the execution flow?
-/*
+  //31. Write a Loop inside other loop and observe the execution flow?
+  /*
   for (i <- 1 to 3) {     // Outer loop
     println(s"Outer loop iteration: $i")
 
@@ -373,6 +373,77 @@ println(s"5*$num")
     }
   }
 }*/
+
+  /*  var a = 1;
+  while (a <= 10){
+  println(a)
+    a = a + 1
+  }
+}*/
+  /*
+var a = 1
+  while (a<=100){
+  if(a % 1 == 0){
+    println(a)
+    a = a + 2
+  }
+    a = a + 1
+  }
+}*/
+
+  /*
+    val inputArray = Array(10, 25, 35, 45)
+    val sum = inputArray.sum
+    println(s"the sum of array element is: $sum")
+  }
+  */
+
+/*  val start = 1
+  val end = 50
+
+  val range1 =  Range(1 ,50)
+  for (i <- range1) {
+    if (i % 2 == 0 ){
+      println(s"The given number which  is $i is  even")
+    }else {
+      println(s"The given number which  is $i is  odd")
+    }
+  }
+}*/
+/*
+  val number = 654
+  val reversed = reverseNumber(number)
+  println(s"The reversed number of $number is $reversed")
+
+def reverseNumber(n: Int): Int = {
+  var num = n
+  var reversed = 0
+  while (num > 0) {
+  val digit = num % 10
+  reversed = reversed * 10 + digit
+  num /= 10
+  }
+  reversed
+
+  }
+  }*/
+
+  val a = 10
+  val b = 20
+  val c = 40
+
+   if (a >= b && a >= c) {
+    println(a)
+  } else if (b >= a && b >= c) {
+    println(b)
+  } else {
+    println(c)
+  }
+  println(s"largest number $a, $b, and $c")
+}
+
+
+
 
 
 
